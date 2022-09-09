@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val viewModel = SharedViewModel()
         viewModel.getCharacters()
         viewModel.name.observe(this) {
-            binding.teste.text = it.toString()
+            binding.teste.text = it
         }
     }
 }
