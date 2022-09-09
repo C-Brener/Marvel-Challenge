@@ -10,7 +10,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class ViewModelTeste : ViewModel() {
+class SharedViewModel : ViewModel() {
     private val _teste = MutableLiveData<List<ComicDataWrapper>>()
     var teste: LiveData<List<ComicDataWrapper>> = _teste
 
