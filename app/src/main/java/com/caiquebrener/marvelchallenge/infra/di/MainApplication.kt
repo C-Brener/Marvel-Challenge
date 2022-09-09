@@ -1,4 +1,4 @@
-package com.caiquebrener.marvelchallenge.di
+package com.caiquebrener.marvelchallenge.infra.di
 
 import android.app.Application
 import org.koin.android.ext.koin.androidContext
