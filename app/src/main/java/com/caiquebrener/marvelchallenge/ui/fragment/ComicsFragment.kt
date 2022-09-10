@@ -5,19 +5,34 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.caiquebrener.marvelchallenge.R
+import androidx.navigation.NavController
+import com.caiquebrener.marvelchallenge.databinding.FragmentComicsBinding
 import com.caiquebrener.marvelchallenge.ui.viewmodel.SharedViewModel
+import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ComicsFragment : Fragment() {
-    private val viewmodel: SharedViewModel by viewModel<SharedViewModel>()
+    private var _binding: FragmentComicsBinding? = null
+    private val binding get() = _binding!!
+
+    private val viewmodel: SharedViewModel by sharedViewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_comics, container, false)
+        _binding = FragmentComicsBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        viewmodel.getCharacters("Hulk")
+
+        viewmodel.name.observe(viewLifecycleOwner) {
+            binding.textView.text = it
+        }
+
+    }
 }
