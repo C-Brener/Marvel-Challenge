@@ -2,11 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/comicsFragment"
+        android:icon="@drawable/ic_launcher_foreground"
         android:title="@string/comics_string"
         />
     <item
         android:id="@+id/favoriteComicsFragment"
-        android:title="@string/comics_string"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="@string/favorite_comics"
         />
 
 </menu>
