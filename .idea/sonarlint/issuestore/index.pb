@@ -66,14 +66,8 @@ P
 capp/src/main/java/com/caiquebrener/marvelchallenge/data/repository/getcomics/GetComicsRepository.kt,6/f/6f208afbb0fb99211dbf5d2e22b742706c095689
 ù
 mapp/src/main/java/com/caiquebrener/marvelchallenge/data/repository/getcomics/impl/GetComicsRespositoryImpl.kt,b/b/bb021cbf433927a131137b19c4911d1c71a5637a
-è
-_app/src/main/java/com/caiquebrener/marvelchallenge/domain/usecase/getcomics/GetComicsUsecase.kt,c/8/c85db5da0c29e38c43440a6e522bd043673e5f9a
-ì
-capp/src/main/java/com/caiquebrener/marvelchallenge/domain/usecase/getcomics/GetComicsUseCaseImpl.kt,b/c/bcfacb58ec3ee460a9c0084ced09eed86ac97192
 <
 build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
-q
-Aapp/src/main/java/com/caiquebrener/marvelchallenge/infra/di/Di.kt,b/c/bc9ed9a5679cb915e2bd5f8ec6caaca485cd867a
 ~
 Napp/src/main/java/com/caiquebrener/marvelchallenge/infra/di/MainApplication.kt,a/f/afc9ace685c7bd8967257498fa0910c87549a729
 y
