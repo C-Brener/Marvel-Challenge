@@ -2,12 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/comicsFragment"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/ic_book_24"
         android:title="@string/comics_string"
         />
     <item
         android:id="@+id/favoriteComicsFragment"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/ic_favorite_24"
         android:title="@string/favorite_comics"
         />
 
