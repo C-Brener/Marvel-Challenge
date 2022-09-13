@@ -6,7 +6,7 @@ import com.caiquebrener.marvelchallenge.data.repository.comics.ComicsRepository
 import retrofit2.Call
 
 class ComicsRespositoryImpl() : ComicsRepository {
-    override fun getComicsApi(person: String): Call<ComicDataWrapper> {
+    override suspend fun getComicsApi(person: String): ComicDataWrapper {
         return service.listCharacters(person)
     }
 }

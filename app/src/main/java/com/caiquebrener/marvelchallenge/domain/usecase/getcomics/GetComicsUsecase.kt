@@ -1,8 +1,7 @@
 package com.caiquebrener.marvelchallenge.domain.usecase.getcomics
 
-import com.caiquebrener.marvelchallenge.data.dto.getcomics.ComicDataWrapper
-import retrofit2.Call
+import com.caiquebrener.marvelchallenge.data.dto.getcomics.Comic
 
 interface GetComicsUsecase {
-    fun getComics(person:String): Call<ComicDataWrapper>
+    suspend fun getComics(person: String): List<Comic>
 }
