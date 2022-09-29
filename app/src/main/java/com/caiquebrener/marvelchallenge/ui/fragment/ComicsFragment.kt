@@ -31,7 +31,7 @@ class ComicsFragment : Fragment() {
         viewmodel.getCharacters("Hulk")
 
         viewmodel.name.observe(viewLifecycleOwner) {
-            binding.textView.text = it
+            binding.textViewComic.text = it
         }
 
     }
