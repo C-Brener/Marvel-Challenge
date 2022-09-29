@@ -1,10 +1,10 @@
 package com.caiquebrener.marvelchallenge.infra.di
 
 import com.caiquebrener.marvelchallenge.data.mappers.CharactersMapper
-import com.caiquebrener.marvelchallenge.data.repository.comics.ComicsRepository
+import com.caiquebrener.marvelchallenge.data.repository.comics.interfaces.ComicsRepository
 import com.caiquebrener.marvelchallenge.data.repository.comics.impl.ComicsRespositoryImpl
-import com.caiquebrener.marvelchallenge.domain.usecase.getcomics.GetComicsUseCaseImpl
-import com.caiquebrener.marvelchallenge.domain.usecase.getcomics.GetComicsUsecase
+import com.caiquebrener.marvelchallenge.domain.usecase.getcomics.impl.GetComicsUseCaseImpl
+import com.caiquebrener.marvelchallenge.domain.usecase.getcomics.interfaces.GetComicsUseCase
 import com.caiquebrener.marvelchallenge.ui.viewmodel.SharedViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -13,7 +13,7 @@ import org.koin.dsl.module
 object Di {
 
     private val viewModel = module {
-        viewModel { SharedViewModel(get()) }
+        viewModel { SharedViewModel(get(), get()) }
     }
 
     private val mappers = module {
@@ -25,8 +25,12 @@ object Di {
     }
 
     private val usecase = module {
-        factory<GetComicsUsecase> { GetComicsUseCaseImpl(get()) }
+        factory<GetComicsUseCase> { GetComicsUseCaseImpl(get()) }
     }
 
-    val appModule = viewModel + mappers + repository + usecase
+    private val mapper = module {
+        factory<CharactersMapper> { CharactersMapper() }
+    }
+
+    val appModule = viewModel + mappers + repository + usecase + mapper
 }

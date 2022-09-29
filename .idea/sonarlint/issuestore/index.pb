@@ -19,10 +19,6 @@ u
 Eapp/src/test/java/com/caiquebrener/marvelchallenge/ExampleUnitTest.kt,5/c/5c48f1f3701d2926fee18ca8fa005a351faa81d3
 ‡
 Wapp/src/main/java/com/caiquebrener/marvelchallenge/data/dto/getcomics/CharactersList.kt,8/0/803e66c2d71dc5394e27be68111fd57381551c8b
-ƒ
-Sapp/src/main/java/com/caiquebrener/marvelchallenge/data/mappers/CharactersMapper.kt,5/0/50f5a62c05a3d05f92a370ff0e80edb933dac0e4
-~
-Napp/src/main/java/com/caiquebrener/marvelchallenge/ui/model/CharactersModel.kt,b/b/bb6fa2b246a7d9ee774e78e32aa58aabfa7075e5
 Š
 Zapp/src/main/java/com/caiquebrener/marvelchallenge/data/dto/getcomics/CharactersSummary.kt,2/7/272cea30e3b1a31cc6f7e7395bba5308217b94bd
 ~
@@ -63,3 +59,5 @@ P
 build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
 ~
 Napp/src/main/java/com/caiquebrener/marvelchallenge/infra/di/MainApplication.kt,a/f/afc9ace685c7bd8967257498fa0910c87549a729
+y
+Iapp/src/main/java/com/caiquebrener/marvelchallenge/data/api/ApiService.kt,9/7/97f288cadc099c5d4abb43c8b8745b74d9c58ba3
