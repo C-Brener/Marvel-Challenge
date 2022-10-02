@@ -5,11 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
+import com.caiquebrener.marvelchallenge.R
 import com.caiquebrener.marvelchallenge.databinding.FragmentComicsBinding
 import com.caiquebrener.marvelchallenge.ui.viewmodel.SharedViewModel
+import com.squareup.picasso.Picasso
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ComicsFragment : Fragment() {
     private var _binding: FragmentComicsBinding? = null
@@ -32,6 +32,17 @@ class ComicsFragment : Fragment() {
 
         viewmodel.name.observe(viewLifecycleOwner) {
             binding.textViewComic.text = it
+        }
+        viewmodel.image.observe(viewLifecycleOwner) {
+            it?.let { url ->
+                if (url.isNotEmpty()) {
+                    Picasso.get()
+                        .load(url)
+                        .error(R.drawable.ic_book_24)
+                        .into(binding.ImageView)
+                }
+            }
+
         }
 
     }

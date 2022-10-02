@@ -10,10 +10,14 @@ class CharactersMapper {
             charactersModel.add(
                 CharactersModel(
                     name = it.title,
-                    description = it.description
+                    description = it.description,
+                    url = getValidLinkApi(it).replace("http:","https:")
                 )
             )
         }
         return charactersModel
     }
+
+    private fun getValidLinkApi(it: Comic) =
+        "${it.thumbnail.path}/landscape_xlarge.${it.thumbnail.extension}"
 }

@@ -14,14 +14,18 @@ class SharedViewModel(private val useCase: GetComicsUseCase, private val mapper:
     private val _name = MutableLiveData("")
     var name: LiveData<String> = _name
 
+    private val _image = MutableLiveData("")
+    var image: LiveData<String> = _image
+
 
     fun getCharacters(person: String) {
         viewModelScope.launch {
-            val teste = mapper.toCharactersModel(useCase.getComics(person = person))
+            var teste = mapper.toCharactersModel(useCase.getComics(person = person))
             teste.forEach {
-                it.name?.let { it1 -> Log.i("Teste", it1) }
+               Log.i("Teste", "${it.url}")
             }
             _name.postValue(teste[1].name)
+            _image.postValue(teste[1].url)
         }
     }
 }
