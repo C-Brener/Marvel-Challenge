@@ -22,7 +22,7 @@ class SharedViewModel(private val useCase: GetComicsUseCase, private val mapper:
         viewModelScope.launch {
             var teste = mapper.toCharactersModel(useCase.getComics(person = person))
             teste.forEach {
-               Log.i("Teste", "${it.url}")
+                Log.i("Teste", "${it.url}")
             }
             _name.postValue(teste[1].name)
             _image.postValue(teste[1].url)
