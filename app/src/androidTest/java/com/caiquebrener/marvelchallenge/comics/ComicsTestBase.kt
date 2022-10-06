@@ -2,7 +2,7 @@ package com.caiquebrener.marvelchallenge.comics
 
 import androidx.fragment.app.testing.launchFragmentInContainer
 import com.caiquebrener.marvelchallenge.R
-import com.caiquebrener.marvelchallenge.ui.fragment.ComicsFragment
+import com.caiquebrener.marvelchallenge.ui.fragment.comics.ComicsFragment
 
 open class ComicsTestBase {
 

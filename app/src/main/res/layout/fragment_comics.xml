@@ -5,25 +5,16 @@
     android:layout_width="match_parent"
     android:id="@+id/teste"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.ComicsFragment">
+    tools:context=".ui.fragment.comics.ComicsFragment">
 
-    <TextView
-        android:id="@+id/textViewComic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerComicsView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/ImageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/comic_card_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

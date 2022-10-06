@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/comicsFragment"
-        android:name="com.caiquebrener.marvelchallenge.ui.fragment.ComicsFragment"
+        android:name="com.caiquebrener.marvelchallenge.ui.fragment.comics.ComicsFragment"
         android:label="fragment_comics"
         tools:layout="@layout/fragment_comics" />
     <fragment
         android:id="@+id/favoriteComicsFragment"
-        android:name="com.caiquebrener.marvelchallenge.ui.fragment.FavoriteComicsFragment"
+        android:name="com.caiquebrener.marvelchallenge.ui.fragment.favorites.FavoriteComicsFragment"
         android:label="fragment_favorite_comics"
         tools:layout="@layout/fragment_favorite_comics" />
 </navigation>

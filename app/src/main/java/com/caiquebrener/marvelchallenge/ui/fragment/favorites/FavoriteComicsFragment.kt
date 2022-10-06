@@ -1,4 +1,4 @@
-package com.caiquebrener.marvelchallenge.ui.fragment
+package com.caiquebrener.marvelchallenge.ui.fragment.favorites
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -24,7 +24,7 @@ class FavoriteComicsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         sharedViewModel.name.observe(viewLifecycleOwner) {
-            binding.textView2.text = it
+//            binding.textView2.text = it
         }
     }
 }
