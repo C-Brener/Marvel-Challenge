@@ -5,7 +5,7 @@ import com.caiquebrener.marvelchallenge.data.repository.comics.interfaces.Comics
 import com.caiquebrener.marvelchallenge.domain.usecase.getcomics.interfaces.GetComicsUseCase
 
 class GetComicsUseCaseImpl(private val repository: ComicsRepository) : GetComicsUseCase {
-    override suspend fun getComics(person: String): List<Comic> {
+    override suspend fun getComics(person: String?): List<Comic> {
         return repository.getComicsApi(person).data.results
     }
 }
