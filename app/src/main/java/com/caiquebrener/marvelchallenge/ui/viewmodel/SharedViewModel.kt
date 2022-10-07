@@ -4,20 +4,20 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.caiquebrener.marvelchallenge.data.mappers.CharactersMapper
+import com.caiquebrener.marvelchallenge.data.mappers.ComicsMapper
 import com.caiquebrener.marvelchallenge.domain.usecase.getcomics.interfaces.GetComicsUseCase
-import com.caiquebrener.marvelchallenge.ui.model.CharactersModel
+import com.caiquebrener.marvelchallenge.ui.model.ComicsModel
 import kotlinx.coroutines.launch
 
-class SharedViewModel(private val useCase: GetComicsUseCase, private val mapper: CharactersMapper) : ViewModel() {
+class SharedViewModel(private val useCase: GetComicsUseCase, private val mapper: ComicsMapper) : ViewModel() {
 
-    private val _name = MutableLiveData<List<CharactersModel>>()
-    var name: LiveData<List<CharactersModel>> = _name
+    private val _name = MutableLiveData<List<ComicsModel>>()
+    var name: LiveData<List<ComicsModel>> = _name
 
 
-    fun getCharacters(person: String? = null) {
+    fun getComics(person: String? = null) {
         viewModelScope.launch {
-            var teste = mapper.toCharactersModel(useCase.getComics(person = person))
+            var teste = mapper.toComicsModel(useCase.getComics(person = person))
             _name.postValue(teste)
         }
     }

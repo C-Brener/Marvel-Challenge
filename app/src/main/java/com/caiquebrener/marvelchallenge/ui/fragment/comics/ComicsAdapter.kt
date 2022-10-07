@@ -4,9 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.caiquebrener.marvelchallenge.databinding.ComicCardItemBinding
-import com.caiquebrener.marvelchallenge.ui.model.CharactersModel
+import com.caiquebrener.marvelchallenge.ui.model.ComicsModel
 
-class ComicsAdapter(private val comicList: List<CharactersModel>) :
+class ComicsAdapter(private val comicList: List<ComicsModel>) :
     RecyclerView.Adapter<ComicsViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ComicsViewHolder {
         return ComicsViewHolder(
@@ -22,4 +22,5 @@ class ComicsAdapter(private val comicList: List<CharactersModel>) :
     }
 
     override fun getItemCount() = comicList.size
+
 }

@@ -1,6 +1,6 @@
 package com.caiquebrener.marvelchallenge.infra.di
 
-import com.caiquebrener.marvelchallenge.data.mappers.CharactersMapper
+import com.caiquebrener.marvelchallenge.data.mappers.ComicsMapper
 import com.caiquebrener.marvelchallenge.data.repository.comics.interfaces.ComicsRepository
 import com.caiquebrener.marvelchallenge.data.repository.comics.impl.ComicsRepositoryImpl
 import com.caiquebrener.marvelchallenge.domain.usecase.getcomics.impl.GetComicsUseCaseImpl
@@ -17,7 +17,7 @@ object Di {
     }
 
     private val mappers = module {
-        factory { CharactersMapper() }
+        factory { ComicsMapper() }
     }
 
     private val repository = module {
@@ -29,7 +29,7 @@ object Di {
     }
 
     private val mapper = module {
-        factory<CharactersMapper> { CharactersMapper() }
+        factory<ComicsMapper> { ComicsMapper() }
     }
 
     val appModule = viewModel + mappers + repository + usecase + mapper

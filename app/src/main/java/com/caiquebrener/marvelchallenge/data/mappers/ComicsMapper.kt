@@ -1,12 +1,12 @@
 package com.caiquebrener.marvelchallenge.data.mappers
 
 import com.caiquebrener.marvelchallenge.data.dto.getcomics.Comic
-import com.caiquebrener.marvelchallenge.ui.model.CharactersModel
+import com.caiquebrener.marvelchallenge.ui.model.ComicsModel
 
-class CharactersMapper {
-    fun toCharactersModel(comicApi: List<Comic>): List<CharactersModel> {
+class ComicsMapper {
+    fun toComicsModel(comicApi: List<Comic>): List<ComicsModel> {
         return comicApi.map {
-            CharactersModel(
+            ComicsModel(
                 name = it.title,
                 description = it.description,
                 url = getValidLinkApi(it).replace("http:", "https:"),

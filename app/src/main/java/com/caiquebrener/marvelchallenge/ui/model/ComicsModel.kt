@@ -1,6 +1,6 @@
 package com.caiquebrener.marvelchallenge.ui.model
 
-data class CharactersModel(
+data class ComicsModel(
     val name: String?,
     val id: Int?,
     val url: String?,

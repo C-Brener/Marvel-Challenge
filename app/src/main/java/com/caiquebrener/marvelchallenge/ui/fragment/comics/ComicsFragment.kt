@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.caiquebrener.marvelchallenge.databinding.FragmentComicsBinding
+import com.caiquebrener.marvelchallenge.ui.model.ComicsModel
 import com.caiquebrener.marvelchallenge.ui.viewmodel.SharedViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
@@ -27,15 +28,19 @@ class ComicsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.getCharacters("Ghost Rider")
+        viewModel.getComics()
         setupObserver()
     }
 
     private fun setupObserver() {
         viewModel.name.observe(viewLifecycleOwner) { list ->
-            binding.recyclerComicsView.adapter = ComicsAdapter(list)
-            binding.recyclerComicsView.layoutManager =
-                GridLayoutManager(context,2)
+            setupRecyclerView(list)
         }
+    }
+
+    private fun setupRecyclerView(list: List<ComicsModel>) {
+        binding.recyclerComicsView.adapter = ComicsAdapter(list)
+        binding.recyclerComicsView.layoutManager =
+            GridLayoutManager(context, 2)
     }
 }
