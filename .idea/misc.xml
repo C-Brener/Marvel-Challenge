@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../layout/compose-model-1665188839667.xml" value="0.5042553191489362" />
+        <entry key="../../../../../layout/compose-model-1665191318482.xml" value="1.0" />
+        <entry key="../../../../../layout/compose-model-1665191401859.xml" value="0.33" />
+        <entry key="../../../../../layout/compose-model-1665269993653.xml" value="1.0151515151515151" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.12092391304347826" />
         <entry key="app/src/main/res/layout/comic_card_item.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_comics.xml" value="0.17447916666666666" />

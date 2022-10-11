@@ -2,6 +2,7 @@ package com.caiquebrener.marvelchallenge.data.mappers
 
 import com.caiquebrener.marvelchallenge.data.dto.getcomics.Comic
 import com.caiquebrener.marvelchallenge.ui.model.ComicsModel
+import com.squareup.picasso.Picasso
 
 class ComicsMapper {
     fun toComicsModel(comicApi: List<Comic>): List<ComicsModel> {
@@ -17,4 +18,6 @@ class ComicsMapper {
 
     private fun getValidLinkApi(it: Comic) =
         "${it.thumbnail.path}/portrait_xlarge.${it.thumbnail.extension}"
+
+
 }
