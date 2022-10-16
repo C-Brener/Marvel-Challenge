@@ -11,14 +11,20 @@ import kotlinx.coroutines.launch
 
 class SharedViewModel(private val useCase: GetComicsUseCase, private val mapper: ComicsMapper) : ViewModel() {
 
-    private val _name = MutableLiveData<List<ComicsModel>>()
-    var name: LiveData<List<ComicsModel>> = _name
+    private val _listComic = MutableLiveData<List<ComicsModel>>()
+    val listComic: LiveData<List<ComicsModel>> = _listComic
 
+
+    private val _comic = MutableLiveData<ComicsModel>()
+    var comic:LiveData<ComicsModel> = _comic
 
     fun getComics(person: String? = null) {
         viewModelScope.launch {
             var teste = mapper.toComicsModel(useCase.getComics(person = person))
-            _name.postValue(teste)
+            _listComic.postValue(teste)
         }
+    }
+    fun setComicsDetails(comic:ComicsModel){
+        _comic.postValue(comic)
     }
 }

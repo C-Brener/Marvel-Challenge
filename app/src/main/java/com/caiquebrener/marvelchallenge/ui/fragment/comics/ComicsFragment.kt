@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.caiquebrener.marvelchallenge.databinding.FragmentComicsBinding
 import com.caiquebrener.marvelchallenge.ui.model.ComicsModel
@@ -33,14 +34,19 @@ class ComicsFragment : Fragment() {
     }
 
     private fun setupObserver() {
-        viewModel.name.observe(viewLifecycleOwner) { list ->
+        viewModel.listComic.observe(viewLifecycleOwner) { list ->
             setupRecyclerView(list)
         }
     }
 
     private fun setupRecyclerView(list: List<ComicsModel>) {
-        binding.recyclerComicsView.adapter = ComicsAdapter(list)
-        binding.recyclerComicsView.layoutManager =
-            GridLayoutManager(context, 2)
+        with(binding.recyclerComicsView) {
+            adapter = ComicsAdapter(list) {
+                viewModel.setComicsDetails(it)
+                findNavController().navigate(ComicsFragmentDirections.actionComicsFragmentToComicsDetailsFragment())
+            }
+            layoutManager =
+                GridLayoutManager(context, 2)
+        }
     }
 }
