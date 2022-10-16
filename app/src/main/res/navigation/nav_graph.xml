@@ -9,10 +9,19 @@
         android:id="@+id/comicsFragment"
         android:name="com.caiquebrener.marvelchallenge.ui.fragment.comics.ComicsFragment"
         android:label="fragment_comics"
-        tools:layout="@layout/fragment_comics" />
+        tools:layout="@layout/fragment_comics" >
+        <action
+            android:id="@+id/action_comicsFragment_to_comicsDetailsFragment"
+            app:destination="@id/comicsDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/favoriteComicsFragment"
         android:name="com.caiquebrener.marvelchallenge.ui.fragment.favorites.FavoriteComicsFragment"
         android:label="fragment_favorite_comics"
         tools:layout="@layout/fragment_favorite_comics" />
+    <fragment
+        android:id="@+id/comicsDetailsFragment"
+        android:name="com.caiquebrener.marvelchallenge.ui.fragment.details.ComicsDetailsFragment"
+        android:label="fragment_comics_details"
+        tools:layout="@layout/fragment_comics_details" />
 </navigation>
