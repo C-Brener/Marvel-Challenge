@@ -14,17 +14,20 @@ class SharedViewModel(private val useCase: GetComicsUseCase, private val mapper:
     private val _listComic = MutableLiveData<List<ComicsModel>>()
     val listComic: LiveData<List<ComicsModel>> = _listComic
 
-
-    private val _comic = MutableLiveData<ComicsModel>()
-    var comic:LiveData<ComicsModel> = _comic
+    private val _comicDetail = MutableLiveData<ComicsModel>()
+    var comicDetail:LiveData<ComicsModel> = _comicDetail
+    init {
+        getComics()
+    }
 
     fun getComics(person: String? = null) {
         viewModelScope.launch {
-            var teste = mapper.toComicsModel(useCase.getComics(person = person))
-            _listComic.postValue(teste)
+            mapper.toComicsModel(useCase.getComics(person = person)).run {
+                _listComic.postValue(this)
+            }
         }
     }
-    fun setComicsDetails(comic:ComicsModel){
-        _comic.postValue(comic)
+    fun setComicsDetails(comicInformation:ComicsModel){
+        _comicDetail.postValue(comicInformation)
     }
 }

@@ -15,21 +15,18 @@ import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 class ComicsFragment : Fragment() {
     private var _binding: FragmentComicsBinding? = null
     private val binding get() = _binding!!
-
     private val viewModel: SharedViewModel by sharedViewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentComicsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        viewModel.getComics()
         setupObserver()
     }
 
@@ -43,10 +40,14 @@ class ComicsFragment : Fragment() {
         with(binding.recyclerComicsView) {
             adapter = ComicsAdapter(list) {
                 viewModel.setComicsDetails(it)
-                findNavController().navigate(ComicsFragmentDirections.actionComicsFragmentToComicsDetailsFragment())
+                setNavigationComicsDetails()
             }
             layoutManager =
                 GridLayoutManager(context, 2)
         }
+    }
+
+    private fun setNavigationComicsDetails() {
+        findNavController().navigate(ComicsFragmentDirections.actionComicsFragmentToComicsDetailsFragment())
     }
 }

@@ -18,18 +18,23 @@ class ComicsDetailsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentComicsDetailsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.comic.observe(viewLifecycleOwner){
-            insertImageUrl(it)
-        }
+        setupObserver()
 
     }
+
+    private fun setupObserver() {
+        viewModel.comicDetail.observe(viewLifecycleOwner) {
+            insertImageUrl(it)
+        }
+    }
+
     private fun insertImageUrl(comics: ComicsModel) {
         Picasso.get()
             .load(comics.url)

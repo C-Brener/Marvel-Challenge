@@ -77,7 +77,5 @@ Yapp/src/main/java/com/caiquebrener/marvelchallenge/data/dto/getcomics/ComicData
 Rapp/src/main/java/com/caiquebrener/marvelchallenge/data/dto/getcomics/ComicDate.kt,e/b/ebac80d9c9a10e6933ba60e01425675814d29c3b
 ‚
 Rapp/src/androidTest/java/com/caiquebrener/marvelchallenge/comics/ComicsTestBase.kt,c/c/ccc35513cc510c3752df2a7703e662ff72dfaef7
-
-Oapp/src/main/java/com/caiquebrener/marvelchallenge/data/mappers/ComicsMapper.kt,3/2/324e32c971132e9a9e941957a3103596dd42d44a
 ‰
 Yapp/src/main/java/com/caiquebrener/marvelchallenge/ui/fragment/comics/ComicsViewHolder.kt,7/1/718a892bd16fc206a8354cb7f17cbd27d334f7aa
