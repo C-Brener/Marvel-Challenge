@@ -23,7 +23,7 @@ class FavoriteComicsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        sharedViewModel.name.observe(viewLifecycleOwner) {
+        sharedViewModel.listComic.observe(viewLifecycleOwner) {
 //            binding.textView2.text = it
         }
     }

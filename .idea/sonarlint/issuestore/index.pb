@@ -27,8 +27,6 @@ Uapp/src/main/java/com/caiquebrener/marvelchallenge/data/dto/getcomics/StorySumm
 Sapp/src/main/java/com/caiquebrener/marvelchallenge/data/dto/getcomics/TextObject.kt,9/c/9cc5cd94825e6bc3798454d42cc12d8445fd016e
 P
  app/src/main/AndroidManifest.xml,8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e
-<
-build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
 ~
 Napp/src/main/java/com/caiquebrener/marvelchallenge/infra/di/MainApplication.kt,a/f/afc9ace685c7bd8967257498fa0910c87549a729
 x
@@ -79,5 +77,7 @@ Yapp/src/main/java/com/caiquebrener/marvelchallenge/data/dto/getcomics/ComicData
 Rapp/src/main/java/com/caiquebrener/marvelchallenge/data/dto/getcomics/ComicDate.kt,e/b/ebac80d9c9a10e6933ba60e01425675814d29c3b
 ‚
 Rapp/src/androidTest/java/com/caiquebrener/marvelchallenge/comics/ComicsTestBase.kt,c/c/ccc35513cc510c3752df2a7703e662ff72dfaef7
-’
-bapp/src/main/java/com/caiquebrener/marvelchallenge/ui/fragment/favorites/FavoriteComicsFragment.kt,e/b/eb1d5448f56aba0aca36b025fc1ed5053cbb4c51
+
+Oapp/src/main/java/com/caiquebrener/marvelchallenge/data/mappers/ComicsMapper.kt,3/2/324e32c971132e9a9e941957a3103596dd42d44a
+‰
+Yapp/src/main/java/com/caiquebrener/marvelchallenge/ui/fragment/comics/ComicsViewHolder.kt,7/1/718a892bd16fc206a8354cb7f17cbd27d334f7aa
