@@ -56,3 +56,5 @@ local.properties
 /.idea/sonarlint/issuestore/c/0/c0a98684b4755fe5532b09a7aeda2dca015367e7
 /.idea/sonarlint/issuestore/c/c/ccc35513cc510c3752df2a7703e662ff72dfaef7
 /.idea/inspectionProfiles/Project_Default.xml
+.idea/deploymentTargetDropDown.xml
+.idea/gradle.xml
